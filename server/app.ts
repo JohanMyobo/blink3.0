@@ -67,7 +67,8 @@ export async function createApp() {
     return res.status(status).json({ message });
   });
 
-  if (process.env.NODE_ENV === "production") {
+  // Only serve static files when running as a traditional server (not on Vercel)
+  if (process.env.NODE_ENV === "production" && !process.env.VERCEL) {
     serveStatic(app);
   }
 
