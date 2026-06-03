@@ -1,6 +1,6 @@
 import { build } from "esbuild";
 
-await build({
+build({
   entryPoints: ["api/_source.ts"],
   bundle: true,
   platform: "node",
@@ -8,4 +8,4 @@ await build({
   outfile: "api/index.js",
   packages: "external",
   logLevel: "info",
-});
+}).catch((e) => { console.error(e); process.exit(1); });
