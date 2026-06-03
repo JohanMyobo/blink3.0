@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertSketchSchema, insertMeditationSessionSchema, insertActivitySessionSchema } from "@shared/schema";
+import { insertSketchSchema, insertMeditationSessionSchema, insertActivitySessionSchema } from "../shared/schema";
 import { z } from "zod";
 import OpenAI from "openai";
 import { isAuthenticated, createSupabaseAdmin } from "./auth";

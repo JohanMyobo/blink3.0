@@ -10,8 +10,8 @@ import {
   type ActivitySession,
   type InsertActivitySession,
   activitySessions,
-} from "@shared/schema";
-import { users, type User, type UpsertUser } from "@shared/models/auth";
+} from "../shared/schema";
+import { users, type User, type UpsertUser } from "../shared/models/auth";
 import { randomUUID } from "crypto";
 
 export interface IStorage {
