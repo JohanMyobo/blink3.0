@@ -1,9 +1,9 @@
 {
-  "buildCommand": "npm run build:client",
+  "buildCommand": "npm run build:vercel",
   "outputDirectory": "dist/public",
   "framework": null,
   "functions": {
-    "api/index.ts": {
+    "api/index.js": {
       "maxDuration": 30
     }
   },
