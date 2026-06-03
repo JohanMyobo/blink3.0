@@ -43,7 +43,11 @@ var import_drizzle_orm2 = require("drizzle-orm");
 // server/db.ts
 var import_node_postgres = require("drizzle-orm/node-postgres");
 var import_pg = require("pg");
-var pool = new import_pg.Pool({ connectionString: process.env.DATABASE_URL });
+var pool = new import_pg.Pool({
+  connectionString: process.env.DATABASE_URL,
+  connectionTimeoutMillis: 5e3,
+  idleTimeoutMillis: 3e4
+});
 var db = (0, import_node_postgres.drizzle)(pool);
 
 // shared/schema.ts
